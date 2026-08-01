@@ -8,7 +8,7 @@
 
 - 服务器状态、日志、玩家、生命周期操作、备份、校验、审批和审计。
 - 自定义 OpenAI-compatible provider、环境变量密钥引用和工具能力探测。
-- ModCrafting 参考工作台：结构化计划、项目分析、文件读取、SHA-256 补丁草稿、审批后应用、受控构建。
+- 模组开发与验证工作台：结构化计划、项目分析、文件读取、SHA-256 补丁草稿、审批后应用、受控构建。
 - 六类 Demo 测试场景：新物品、新方块、新配方、实体行为、玩家交互、HUD/GUI。
 - `DemoModTestAdapter` 和 `fixtures/mod-demo`，不启动真实 Minecraft 客户端。
 - FastAPI `/api/v1/mod-projects` API、SSE 事件、MCP typed tools 和 React 工作台。
@@ -39,9 +39,9 @@ npm run build
 - Demo 测试适配器不会启动 Minecraft、读取游戏内截图或观察真实客户端状态。
 - 真实 Gradle/Minecraft Bridge、Forge/NeoForge 深度适配和基岩版 Add-on 游戏内验证属于后续版本。
 - 当前面向单个服主或小团队，不提供 SaaS、多租户、云端托管和集中式源码存储。
-- GitHub 仓库和 Issue 模板已发布；仓库地址为 <https://github.com/ANL-694/anl-mineops>，外部测试反馈待收集。
+- GitHub 仓库和 Issue 模板已发布；仓库地址为 <https://github.com/ANL-694/anl-mineops>，欢迎通过 Issue 提交测试反馈。
 
-GitHub 公测建议启用仓库内的 `Bug 报告` 和 `功能建议` Issue 模板；提交者不应上传密钥、服务器凭据、世界文件、备份或完整模组源码。
+GitHub 仓库已提供 `Bug 报告` 和 `功能建议` Issue 模板；提交者不应上传密钥、服务器凭据、世界文件、备份或完整模组源码。
 
 贡献规范见 `CONTRIBUTING.md`，安全问题见 `SECURITY.md`。发布页面：<https://github.com/ANL-694/anl-mineops/releases>。
 

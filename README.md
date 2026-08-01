@@ -4,7 +4,7 @@
 
 ## 模组开发与验证工作台（Experimental）
 
-参考 [newstarbar/ModCrafting](https://github.com/newstarbar/ModCrafting) 的 Plan → Execute → Evidence 思路，MineOps 现在提供一个受控的模组工作台。它可以分析已配置的 Fabric/Forge/NeoForge/基岩版项目、读取文本文件、生成带期望哈希的补丁草稿、在审批后应用补丁、执行服主显式配置的白名单构建命令，并从六类模板生成测试场景：新物品、新方块、新配方、实体行为、玩家交互和 HUD/GUI。
+MineOps 现在提供一个受控的模组开发与验证工作台。它可以分析已配置的 Fabric/Forge/NeoForge/基岩版项目、读取文本文件、生成带期望哈希的补丁草稿、在审批后应用补丁、执行服主显式配置的白名单构建命令，并从六类模板生成测试场景：新物品、新方块、新配方、实体行为、玩家交互和 HUD/GUI。
 
 首发测试适配器是 `DemoModTestAdapter`：它只检查 fixture、文件信号和结构化断言，不启动真实 Minecraft 客户端，也不伪造截图或游戏日志。真实 Gradle/Minecraft Bridge 属于后续适配能力。工作区会拒绝绝对路径、路径穿越、敏感文件、符号链接逃逸和任意 shell；`apply_mod_patch`、`build_mod_project` 默认需要审批，所有工具调用仍写入审计记录。
 
@@ -69,6 +69,6 @@ provider 配置只保存 `base_url`、模型名和 API Key 环境变量名，不
 
 项目采用 MIT 许可证，欢迎服主先使用 `DemoAdapter` 和 `demo-mod` 体验，再通过自己的 BDS/Endstone 适配器或模组项目进行测试。请在 Issue 中提供版本、适配器、loader、模组项目类型、脱敏日志、复现步骤和期望结果。
 
-GitHub 仓库：[ANL-694/anl-mineops](https://github.com/ANL-694/anl-mineops)。MineBBS 招募帖草稿见 `docs/release/minebbs-beta-post.md`，测试者应自行连接自己的服务器。
+GitHub 仓库：[ANL-694/anl-mineops](https://github.com/ANL-694/anl-mineops)。MineBBS 招募帖见 `docs/release/minebbs-beta-post.md`，测试者应自行连接自己的服务器。
 
 本项目与 Mojang、Microsoft、Minecraft 官方没有隶属或背书关系。
