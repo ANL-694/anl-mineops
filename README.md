@@ -10,10 +10,6 @@
 
 对应 API 统一位于 `/api/v1/mod-projects`，包括项目分析、文件读取、补丁队列、构建记录、测试场景和证据查询。Agent 对话可以使用“分析 demo 模组项目”“为新物品创建模组测试场景并验证”等请求；需要写入或构建时会在审批队列暂停。
 
-## 为什么不是 OpenClaw
-
-OpenClaw 是已经完成较多产品层工作的多渠道 Agent 网关。ANL MineOps 使用 PydanticAI 管理类型化工具和模型调用，自己实现服务器适配、策略、审批、审计和 Web API；未来可以把 OpenClaw 作为 QQ/Discord 通道适配器，但不依赖它作为核心 runtime。
-
 ## 快速开始
 
 需要 Python 3.11+、Node.js 20+ 和 `uv`。

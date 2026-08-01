@@ -1,4 +1,4 @@
-# ANL MineOps Experimental/Beta 招募帖草稿
+# ANL MineOps Experimental/Beta 招募帖
 
 ## 项目简介
 
