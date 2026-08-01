@@ -39,11 +39,11 @@ npm run build
 - Demo 测试适配器不会启动 Minecraft、读取游戏内截图或观察真实客户端状态。
 - 真实 Gradle/Minecraft Bridge、Forge/NeoForge 深度适配和基岩版 Add-on 游戏内验证属于后续版本。
 - 当前面向单个服主或小团队，不提供 SaaS、多租户、云端托管和集中式源码存储。
-- 发布前需要补充实际 GitHub 仓库 URL、Issue 模板和外部测试反馈。
+- GitHub 仓库和 Issue 模板已发布；仓库地址为 <https://github.com/ANL-694/anl-mineops>，外部测试反馈待收集。
 
 GitHub 公测建议启用仓库内的 `Bug 报告` 和 `功能建议` Issue 模板；提交者不应上传密钥、服务器凭据、世界文件、备份或完整模组源码。
 
-贡献规范见 `CONTRIBUTING.md`，安全问题见 `SECURITY.md`。在仓库 URL 确定前，不要把本文件中的占位发布信息当作已上线地址。
+贡献规范见 `CONTRIBUTING.md`，安全问题见 `SECURITY.md`。发布页面：<https://github.com/ANL-694/anl-mineops/releases>。
 
 ## 反馈
 

@@ -8,7 +8,7 @@ ANL MineOps 是一个从零实现的本地自托管 Minecraft 服务器 Agent，
 
 当前版本重点是安全运维和可审计的模组工作流，不是自然语言 RCON 外壳；默认使用 `DemoAdapter` 与 `demo-mod` fixture，不要求测试者启动真实 BDS 或 Minecraft 客户端。
 
-项目地址：发布时补充 GitHub URL
+项目地址：https://github.com/ANL-694/anl-mineops
 
 版本：`v0.1.0-beta`（Experimental）
 

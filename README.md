@@ -73,6 +73,6 @@ provider 配置只保存 `base_url`、模型名和 API Key 环境变量名，不
 
 项目采用 MIT 许可证，欢迎服主先使用 `DemoAdapter` 和 `demo-mod` 体验，再通过自己的 BDS/Endstone 适配器或模组项目进行测试。请在 Issue 中提供版本、适配器、loader、模组项目类型、脱敏日志、复现步骤和期望结果。
 
-MineBBS 招募帖草稿见 `docs/release/minebbs-beta-post.md`。公开发布前请补充 GitHub URL，并由测试者自行连接自己的服务器。
+GitHub 仓库：[ANL-694/anl-mineops](https://github.com/ANL-694/anl-mineops)。MineBBS 招募帖草稿见 `docs/release/minebbs-beta-post.md`，测试者应自行连接自己的服务器。
 
 本项目与 Mojang、Microsoft、Minecraft 官方没有隶属或背书关系。
