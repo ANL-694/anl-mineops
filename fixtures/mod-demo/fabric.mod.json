@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "mineops-demo",
+  "version": "0.1.0",
+  "name": "MineOps Demo Mod",
+  "description": "A deterministic fixture for the ModCrafting-inspired workbench.",
+  "entrypoints": {
+    "main": ["com.anl.mineops.demo.DemoMod"]
+  }
+}

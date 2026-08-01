@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          version: latest
+      - run: uv sync --extra dev
+      - run: uv run pytest
+      - run: uv run ruff check backend
+      - name: UTF-8 and text integrity
+        run: uv run python scripts/validate_text.py
+      - name: Secret scan
+        shell: bash
+        run: |
+          if git grep -n -I -E 'sk-[A-Za-z0-9]{20,}|Bearer[[:space:]]+[A-Za-z0-9._-]{20,}' -- . ':(exclude).env.example' ':(exclude)uv.lock'; then
+            echo "Potential token detected"
+            exit 1
+          fi
+          if git grep -n -I -E 'api[_-]?key[[:space:]]*[:=][[:space:]]*[A-Za-z0-9_-]{20,}' -- . ':(exclude).env.example' ':(exclude)uv.lock'; then
+            echo "Potential secret detected"
+            exit 1
+          fi
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+      - run: npm run build
